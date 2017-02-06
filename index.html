@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="Root">
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba DataCivic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1 class="display-4" width="center">Índice de Desarrollo Humano </h1>
+          <br><br><br>
+          <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-left">
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Estado
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Aguascalientes</a></li>
+                        <li><a href="#">Baja california</a></li>
+                        <li><a href="#">Baja california sur</a></li>
+                        <li><a href="#">Campeche</a></li>
+                        <li><a href="#">Coahuila</a></li>
+                        <li><a href="#">Colima</a></li>
+                        <li><a href="#">Chiapas</a></li>
+                        <li><a href="#">Chihuahua</a></li>
+                        <li><a href="#">Distrito federal</a></li>
+                        <li><a href="#">Durango</a></li>
+                        <li><a href="#">Guanajuato</a></li>
+                        <li><a href="#">Guerrero</a></li>
+                        <li><a href="#">Hidalgo</a></li>
+                        <li><a href="#">Jalisco</a></li>
+                        <li><a href="#">México</a></li>
+                        <li><a href="#">Michoacán</a></li>
+                        <li><a href="#">Morelos</a></li>
+                        <li><a href="#">Nayarit</a></li>
+                        <li><a href="#">Nuevo León</a></li>
+                        <li><a href="#">Oaxaca</a></li>
+                        <li><a href="#">Puebla</a></li>
+                        <li><a href="#">Querétaro</a></li>
+                        <li><a href="#">Quinatana Roo</a></li>
+                        <li><a href="#">San Luis Potosí</a></li>
+                        <li><a href="#">Sinaloa</a></li>
+                        <li><a href="#">Sonora</a></li>
+                        <li><a href="#">Tabasco</a></li>
+                        <li><a href="#">Tamaulipas</a></li>
+                        <li><a href="#">Tlaxcala</a></li>
+                        <li><a href="#">Veracruz</a></li>
+                        <li><a href="#">Yucatán</a></li>
+                        <li><a href="#">Zacatecas</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Año
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="#">2001</a></li>
+                        <li><a href="#">2002</a></li>
+                        <li><a href="#">2003</a></li>
+                        <li><a href="#">2004</a></li>
+                        <li><a href="#">2005</a></li>
+                        <li><a href="#">2006</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Ordenar datos
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <li><a href="#">Ascendente</a></li>
+                        <li><a href="#">Descendente</a></li>
+                        <li><a href="#">Alfabéticamente</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <br><br>
+      <div class="row" id="Visualiza" ng-controller="Ctrl">
+        <div class="col-md-8" id="Bart">
+          <h1>Presentación de los datos:</h1>
+          <bars-chart
+              chart-data="myData"
+              data=""
+              selected-state=""
+              sort-by=""
+              year=""
+              >
+          </bars-chart>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+  </div>
+  </body>
+</html>
